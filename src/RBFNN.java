@@ -8,6 +8,7 @@ public class RBFNN {
     Neuron[] neurons;
     OutputNeuron[] outputNeurons;
     ArrayList<int[]> trainingData = new ArrayList<int[]>();
+    ArrayList<int[]> trainingDataCopy = new ArrayList<int[]>();
     ArrayList<int[]> testData = new ArrayList<int[]>();
     ArrayList<int[]> validationData = new ArrayList<int[]>();
     HashMap<Integer, Double> outputVector = new HashMap<Integer, Double>();
@@ -43,9 +44,33 @@ public class RBFNN {
         for(Integer key : classCounts.keySet()){
             neurons[i] = new Neuron(key, trainingData);
             neurons[i].setCentroid();
-            outputNeurons[i] = new OutputNeuron(classCounts.size(), key);
+            outputNeurons[i] = new OutputNeuron(neurons.length, key);
             i++;
         }
+    }
+    
+    public void initializeNeurons(){
+        int k = classCounts.size() + 5;
+        clusters = new Cluster[k];
+        initializeClusters();
+        fillClusters();
+        neurons = new Neuron[k];
+        for(int i = 0; i < k; i++){
+            neurons[i].center = clusters[i].centroid;
+        }
+    }
+    
+    public void initializeClusters(){
+        for(int i = 0; i < clusters.length; i++){
+            int random = (int)Math.random()*traininDataCopy.size();
+            cluster[i] = new Cluster(traininDataCopy.get(random));
+            trainingDataCopy.remove(random);
+        }
+    }
+    
+    public void fillClusters(){
+        //Insert fill clusters method
+        //empty training data by clustering the points according to the closest centroid
     }
     
     public double testPerformance(){
@@ -220,9 +245,15 @@ public class RBFNN {
         ArrayList<int[]> values = new ArrayList<int[]>();
         double[] centroid;
         
+        public Cluster(int[] arr){
+            values.add(arr);
+            this.centroid = new double[arr.length-1];
+            setCentroid();
+        }
+        
         void setCentroid(){
             for(int[] arr : values){
-                for(int i = 0; i<arr.length; i++){
+                for(int i = 0; i<arr.length-1; i++){
                     centroid[i] += arr[i];
                 }
             }
