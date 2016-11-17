@@ -219,7 +219,8 @@ public class RBFNN {
     class Cluster {
         ArrayList<int[]> values = new ArrayList<int[]>();
         double[] centroid;
-        setCentroid(){
+        
+        void setCentroid(){
             for(int[] arr : values){
                 for(int i = 0; i<arr.length; i++){
                     centroid[i] += arr[i];
