@@ -215,4 +215,19 @@ public class RBFNN {
             System.out.println("Class : " + key);
         }
     }
+    
+    class Cluster {
+        ArrayList<int[]> values = new ArrayList<int[]>();
+        double[] centroid;
+        setCentroid(){
+            for(int[] arr : values){
+                for(int i = 0; i<arr.length; i++){
+                    centroid[i] += arr[i];
+                }
+            }
+            for(int i = 0; i < centroid.length; i++){
+                centroid[i] /= (double)values.size();
+            }
+        }
+    }
 }
