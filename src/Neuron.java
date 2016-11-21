@@ -19,8 +19,7 @@ public class Neuron {
     double sigma = 1.5;
     double basisOutput;
     
-    public Neuron(Integer classVal, ArrayList<int[]> train){
-        this.classVal = classVal;
+    public Neuron(ArrayList<int[]> train){
         this.trainingData = train;
         this.center = new double[train.get(0).length-1];
     }
@@ -66,7 +65,7 @@ public class Neuron {
      * 
     **************************************************************************/
     
-    public Double euclidNorm(int[] x){
+    public Double euclidNorm(int[] x){ // calculate euclidean norm
         Double dist = 0.0;
         for(int i = 0; i < x.length-1; i++){
             dist += Math.pow((((double)x[i])-center[i]),2);
@@ -74,7 +73,7 @@ public class Neuron {
         return dist;
     }
     
-    public Double dot(int[] queryPoint){
+    public Double dot(int[] queryPoint){ //computes dot product
         double sum = 0;
         for(int i = 0; i < queryPoint.length; i++){
             sum+= (((double)queryPoint[i])*center[i]);
@@ -82,7 +81,7 @@ public class Neuron {
         return sum;
     }
     
-    public void printCenter(){
+    public void printCenter(){ //prints center of the neuron.
         for(Double val : center){
             System.out.print(val +  " ");
         }

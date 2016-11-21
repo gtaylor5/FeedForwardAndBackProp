@@ -1,0 +1,75 @@
+Data set: SoyBean
+
+Statistics for: Radial Basis Function NN
+Mean Performance: 0.705
+Variance of Performance: 0.030600000000000006
+Standard Deviation: 0.17492855684535902
+Confidence Interval: 0.665884785568784 to 0.7441152144312159
+
+Statistics for: Feed Forward w/ Backpropagation
+Mean Performance: 0.95
+Variance of Performance: 0.0037500000000000007
+Standard Deviation: 0.06123724356957946
+Confidence Interval: 0.9363069360623708 to 0.9636930639376291
+
+----------------------------------------
+Data set: Iris
+
+Statistics for: Radial Basis Function NN
+Mean Performance: 0.764021164021164
+Variance of Performance: 0.0038140029674421207
+Standard Deviation: 0.06175761465149152
+Confidence Interval: 0.7502117415722669 to 0.7778305864700612
+
+Statistics for: Feed Forward w/ Backpropagation
+Mean Performance: 0.8679894179894179
+Variance of Performance: 0.00458861733994009
+Standard Deviation: 0.06773933377248473
+Confidence Interval: 0.8528424424828356 to 0.8831363934960001
+
+----------------------------------------
+Data set: GlassID
+
+Statistics for: Radial Basis Function NN
+Mean Performance: 0.5142857142857142
+Variance of Performance: 0.01937588331731585
+Standard Deviation: 0.13919728200405299
+Confidence Interval: 0.4831602558012872 to 0.5454111727701413
+
+Statistics for: Feed Forward w/ Backpropagation
+Mean Performance: 0.6195488721804511
+Variance of Performance: 0.009720165074339988
+Standard Deviation: 0.09859089752274289
+Confidence Interval: 0.5975032772980942 to 0.641594467062808
+
+----------------------------------------
+Data set: BreastCancer
+
+Statistics for: Radial Basis Function NN
+Mean Performance: 0.9464566929133857
+Variance of Performance: 1.5872031744063432E-4
+Standard Deviation: 0.012598425196850371
+Confidence Interval: 0.9436395993984253 to 0.9492737864283461
+
+Statistics for: Feed Forward w/ Backpropagation
+Mean Performance: 0.6551181102362206
+Variance of Performance: 6.547213094426191E-4
+Standard Deviation: 0.025587522534286495
+Confidence Interval: 0.6493965662599733 to 0.6608396542124678
+
+----------------------------------------
+Data set: VoteCount
+
+Statistics for: Radial Basis Function NN
+Mean Performance: 0.918987341772152
+Variance of Performance: 8.716551834641872E-4
+Standard Deviation: 0.02952380706250783
+Confidence Interval: 0.9123856178175165 to 0.9255890657267876
+
+Statistics for: Feed Forward w/ Backpropagation
+Mean Performance: 0.6151898734177215
+Variance of Performance: 2.3073225444640368E-4
+Standard Deviation: 0.015189873417721548
+Confidence Interval: 0.6117933144645572 to 0.6185864323708857
+
+----------------------------------------
